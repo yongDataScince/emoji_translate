@@ -7,4 +7,3 @@ Language: Python
 ## You can translate for exaample:
 - иди домой/иду домой
 - я норм/ок/хорошо/отлично
-- 
