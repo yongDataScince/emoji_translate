@@ -39,8 +39,8 @@ def translate(args) -> str:
     for key in map_words.keys():
       if lemm_word(arg) in key.split("/"):
         # if word for 1per or 2per we're adding spec. emoji
-        if "1per" in morph.parse(arg)[0].tag and "я" not in args: ans += "👆🏼"
-        elif "2per" in morph.parse(arg)[0].tag and "ты" not in args: ans += "👇🏻"
+        if "1per" in morph.parse(arg)[0].tag and "я" not in args: ans += "👇"
+        elif "2per" in morph.parse(arg)[0].tag and "ты" not in args: ans += "👆"
         
         ans += map_words[key] + " "
 
