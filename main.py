@@ -63,14 +63,10 @@ def optimize_translate(args: List[str]) -> str:
   ans = ""
   for arg in args:
     lemm_arg = lemm_word(arg)
-    try:
-      ans += map_words[lemm_arg] + " "
+    if map_words.get(lemm_arg): ans += map_words.get(lemm_arg) + " "
     
-      if "1per" in morph.parse(arg)[0].tag and "я" not in args: ans += "👆🏼"
-      elif "2per" in morph.parse(arg)[0].tag and "ты" not in args: ans += "👇🏻"
-
-    except KeyError:
-      pass
+    if "1per" in morph.parse(arg)[0].tag and "я" not in args: ans += "👆🏼"
+    elif "2per" in morph.parse(arg)[0].tag and "ты" not in args: ans += "👇🏻"
   
   if sys.argv[2][-1] == "?" : ans += "❓"
 
