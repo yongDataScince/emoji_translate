@@ -35,7 +35,7 @@ with open("./data/emoji_dict.txt") as data:
     else:
       key_words = key.split("/")
       for i in range(len(key_words)):
-        map_words[key_words[i]] = f"{value}_{i}".replace("\n", "")
+        map_words[key_words[i]] = value.replace("\n", "")
 
 
 
@@ -64,10 +64,7 @@ def optimize_translate(args: List[str]) -> str:
   for arg in args:
     lemm_arg = lemm_word(arg)
     try:
-      if "_" in map_words[lemm_arg]:
-        ans += map_words[lemm_arg][:-2] + " "
-      else:
-        ans += map_words[lemm_arg] + " "
+      ans += map_words[lemm_arg] + " "
     
       if "1per" in morph.parse(arg)[0].tag and "я" not in args: ans += "👆🏼"
       elif "2per" in morph.parse(arg)[0].tag and "ты" not in args: ans += "👇🏻"
