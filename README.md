@@ -3,6 +3,11 @@ this is a shared repository of students from KUBSAU to work on the project. The 
 
 ## Specs
 Language: Python
+Main libraries: pymorphy2 - for word lemmatization, sys - for readeing arguments from command line
+
+## Our targets in this project
+- научиться работать в команде(как настоящие программисты), используя github.com
+- повысить навыки ребят
 
 ## You can translate for exaample:
 - иди домой/иду домой
