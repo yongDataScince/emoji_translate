@@ -110,5 +110,5 @@ elif sys.argv[1] == "-h" or sys.argv[1] == "--help":
     help: '-h' or '--help'
     translate text to emoji: '-t'
     time test: '-time'
-    lemmatize words: - '--lemmatize' or '-l' "дам, даст" -> "дать, дать" 
+    lemmatize words: '--lemmatize' or '-l' "дам, даст" -> "дать, дать" 
   """)
